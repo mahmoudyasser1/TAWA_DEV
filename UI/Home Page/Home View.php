@@ -115,7 +115,7 @@ else
 			<div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
-				<a class="nav-link links" href="../Log-Reg-UI/registration.php">Sign up <span class="sr-only">(current)</span></a>
+				<a class="nav-link links" href="../Log-Reg-UI/login.php">Logout <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="nav-item">
 				<h3 class="nav-link links"><?php echo $_SESSION['user'];?></h3>
@@ -146,15 +146,13 @@ else
 <img class="card-img" src="shangri-las.jpg" alt="Country" height="100" width="150" hspace="50">
 </td>
 <td >
-</br>
-	</br>
-	</br>
+
 	</br>
     <p>Where to go: Temple of the Tooth,Sigiriya,Yala National Park</p>
 	<p>Restaurants: The Lagoon, Nuga Gama, Ministry of Crab</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
-	<button class="btn btn-lg btn-block btn-danger" type="submit" name="sirlanka">readmore</button>
+	<button class="btn btn-lg btn-block btn-danger" type="submit" name="sirlanka" style="color:black;">Read more</button>
 	</form>
 	</td>
 	
@@ -169,15 +167,13 @@ else
 <img class="card-img" src="Turkey.jpg" alt="Country" height="100" width="150" hspace="50" >
     </td>
 	<td>
-	</br>
-	</br>
-	</br>
+
 	</br>
     <p>Where to go: Istanbul,Pamukkale,Antalya</p>
 	<p>Restaurants: Istanbul Restaurants, Ankara Restaurants, Bursa Restaurants</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
-	<button class="btn btn-lg btn-block btn-danger" type="submit" name="turkey">readmore</button>
+	<button class="btn btn-lg btn-block btn-danger" type="submit" name="turkey" style="color:black;">Read more</button>
 	</form>
 	</td>
 	</tr>
@@ -194,15 +190,13 @@ else
 <img class="card-img" src="malysia.jpg" alt="Country" height="100" width="150" hspace="50">
     </td>
 	<td >
-	</br>
-	</br>
-	</br>
+
 	</br>
     <p>Where to go: Kuala Lumpur,Penang,Langkawi</p>
 	<p>Restaurants: Johor Bahru Restaurants, NURMALAYSIA CAIRO,Penang Island Restaurants</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
-	<button class="btn btn-lg btn-block btn-danger" type="submit" name="malysia">readmore</button>
+	<button class="btn btn-lg btn-block btn-danger" type="submit" name="malysia" style="color:black;">Read more</button>
 	</form>
 	</td>
 	</tr>
@@ -216,15 +210,13 @@ else
 <img class="card-img" src="palmislands1.jpg" alt="Country" height="100" width="150" hspace="50">
 </td>
 <td>
-</br>
-	</br>
-	</br>
+
 	</br>
  <p>Where to go: Dubai Marina,Burj Khalifa,Burj Al Arab Jumeirah</p>
 	<p>Restaurants: Dubai House,Maiden Shanghai,Ahlan First Class Lounge</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
-	<button class="btn btn-lg btn-block btn-danger" type="submit" name="dubai">readmore</button>
+	<button class="btn btn-lg btn-block btn-danger" type="submit" name="dubai" style="color:black;">Read more</button>
 	</form>
 	</td>
 	</tr>

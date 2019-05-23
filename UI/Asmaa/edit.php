@@ -60,8 +60,47 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 ?>
-<!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Edit User</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/style.css" rel="stylesheet" media="all">
+    <style type="text/css">
+          body {
+   background-image: url("img/bg-img/editor-2.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100%100%;
+  
+}
+    </style>
+</head>
+
+<body>
+    
+            <div class="card card-3" style="background-color: #000000ab;">
+                <div class="card-heading"> </div>
+                <div class="card-body" style="margin-left: 50px;"> 
                     <form method="post">
                         </div>
                         <div class="input-group">
@@ -102,6 +141,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </form>
                 </div>
             </div>
+
  
 
     <!-- Jquery JS-->
