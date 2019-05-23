@@ -1,0 +1,21 @@
+body
+{
+	background-image: url("../../images/shangri-las.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1
+{
+	font-family:Charmonman Bold;
+	color:#85144b;
+	/* color: white; */
+	font-size:65;
+	background-color:white;
+	opacity:0.7;
+	width: 75%;
+	width: 70%;
+	padding: 40px;
+	border-radius: 20px;	
+}
+	

@@ -1,0 +1,79 @@
+body
+{
+	background-image: url("images/Home/back3.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1
+{
+	color: #212121;
+}
+
+.btn
+{
+	z-index: 4;
+	display: block;
+	position: fixed;
+	bottom: 100px;
+	left: 15px;
+}
+
+#footer
+{
+	background-color: rgba(0,0,0,0.5);
+	padding: 0;
+	margin: 0;
+	font-family:Cursive;
+	position: fixed;
+	bottom: 0;
+	height: 55px
+}
+
+#footer h3
+{
+	font-size: 15px;
+	font-weight: 700;
+}
+
+#footer td
+{
+	text-align: center;
+	width: 16%;
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+#footer a:hover
+{
+	color: #008080;
+}
+
+#footer td.social
+{
+	width: 3%;
+}
+
+#footer td.social:hover{
+	opacity: 0.6;
+}
+
+#footer td.copyright
+{
+    width: 100%;
+}
+
+#footer td a
+{
+	vertical-align: middle;
+	text-decoration: none;
+	color: white;
+}
+
+#footer #copyright
+{
+    background-color: black;
+    color: white;
+    padding-top: 3px;
+    text-align: center;
+}
