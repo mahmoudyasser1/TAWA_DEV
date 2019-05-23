@@ -82,7 +82,7 @@ if(isset($_POST["Book"])){
            <label class="style">Payment Method</label>
 	     </td>
          <td class="input">
-	      <select name="payment" >
+	      <select name="payment"onchange=myFunction() >
 		<option value="Debit Card" width="30">Debit Card</option>      
 	    <option value="Cash" width="30">Cash</option>
 		</td>		 
@@ -107,15 +107,8 @@ if(isset($_POST["Book"])){
 		   <input type="radio" name="Type" value="Round-Trip">Round-Trip</input>
          </td>		 
       </tr>
-	  <tr>
-         <td>
-           <label class="style">Flight Number</label>
-	     </td>
-		 <td class="input">
-		 
-		 <input name="FN" type="Number" required>
-		 
-		 </tr>
+
+     
 	    <tr>
          <td>
            <label class="style">Travel Date</label>
@@ -125,15 +118,8 @@ if(isset($_POST["Book"])){
 		 <input name="Date" type="date" required>
 		 
 		 </tr>
-		   <tr>
-         <td>
-           <label class="style">Travel Destination</label>
-	     </td>
-		 <td class="input">
-		 
-		 <input name="Destination" type="text" required>
-		 
-		 </tr>
+
+        
 	  <tr>
          <td>
            <label class="style">Airline</label>
@@ -156,7 +142,7 @@ if(isset($_POST["Book"])){
 	  <tr>
 		<td colspan="2"> <center>     
 			<input  class="btn btn-danger" type="submit" value="Book Now" name="Book" />
-			<input class="btn btn-warning" type="button" value="Cancel" onclick="window.location.href='../Home Page/Home Page.html'" />
+			<input class="btn btn-warning" type="button" value="Cancel" onclick="window.location.href='../Home Page/Home View.php'" />
 		</td>
 	
 	  </tr>
@@ -168,7 +154,19 @@ if(isset($_POST["Book"])){
 
 </center>
 	<script>
-	
+	function myFunction()
+	{
+	  var x = document.getElementByName("payment").value;
+	  if(x == "Cash")
+	  {
+	  document.getElementByName("Card").disabled=true;
+	  }
+	  else 
+	  {
+	  	  document.getElementByName("Card").disabled=false;
+	  }
+	}
+}
 	
 	</script>
   

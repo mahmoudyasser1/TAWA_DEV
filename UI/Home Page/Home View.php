@@ -17,9 +17,10 @@ body{
 
 }
 .section  {
-	font-size: 2rem;
+font-size: 2rem;
 font-family: fantasy;;
-z-index: 1;  
+z-index: 1;	
+location: left;
 }
 .card-img
 {
@@ -32,7 +33,7 @@ z-index: 1;
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 40%;
   height:30%;
   padding: 50px;
 }
@@ -62,6 +63,8 @@ z-index: 1;
 }
 p{
 font-size:14;
+width: 160%;
+position: center;
 }
 </style>
 </head>
@@ -122,7 +125,7 @@ else
 			  </li>
 			  <form method="post" action="Home View.php"> 
 			  <li class="nav-item">
-				<button class="nav-link links" type="submit" name="reserved">Reserved Trips</button>
+                             <a class="nav-link links" href="../Asmaa/Reserved Trips.php">Reserved Trips</a>
 				
 			  </li>
 			  </form>
@@ -142,14 +145,18 @@ else
   <table cellspacing="20">
   <tr>
   <td>
-    <p margin-left="100px" class="section">SRI LANKA</p>
-<img class="card-img" src="shangri-las.jpg" alt="Country" height="100" width="150" hspace="50">
+    <p class="section">SRI LANKA</p>	
+	<img class="card-img" src="shangri-las.jpg" alt="Country" style=" height: 150px; width: 200px;" hspace="50">
 </td>
 <td >
+</br>
+    </br>		
+    </br>
+    </br>
+      <p>Where to go: Temple of the Tooth,Sigiriya,Yala National Park</p>
 
-	</br>
-    <p>Where to go: Temple of the Tooth,Sigiriya,Yala National Park</p>
 	<p>Restaurants: The Lagoon, Nuga Gama, Ministry of Crab</p>
+
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
 	<button class="btn btn-lg btn-block btn-danger" type="submit" name="sirlanka" style="color:black;">Read more</button>
@@ -160,17 +167,19 @@ else
 	</table>
   </div>
   <div class="column" >
-  <table cellspacing="10">
+  <table cellspacing="20">
   <tr>
   <td>
-  <center>  <p class="section">TURKEY</p> </center>
-<img class="card-img" src="Turkey.jpg" alt="Country" height="100" width="150" hspace="50" >
-    </td>
-	<td>
-
+<p class="section">TURKEY</p>	
+<img class="card-img" src="Turkey.jpg" alt="Country" style=" height: 150px; width: 200px;" hspace="50">
+</td>
+<td>
+</br>
+</br>
+</br>
 	</br>
-    <p>Where to go: Istanbul,Pamukkale,Antalya</p>
-	<p>Restaurants: Istanbul Restaurants, Ankara Restaurants, Bursa Restaurants</p>
+ <p>Where to go: Istanbul,Pamukkale,Antalya</p>
+	<p>Restaurants: Dubai House,Maiden Shanghai,Ahlan First Class Lounge</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
 	<button class="btn btn-lg btn-block btn-danger" type="submit" name="turkey" style="color:black;">Read more</button>
@@ -178,25 +187,28 @@ else
 	</td>
 	</tr>
 	</table>
-  </div>
+	</div>
 </div>
+  
+
 
 <div class="row">
   <div class="column" >
   <table cellspacing="20">
   <tr>
   <td >
-<center>  <p class="section">MALYSIA</p> </center>
-<img class="card-img" src="malysia.jpg" alt="Country" height="100" width="150" hspace="50">
+<p class="section">MALYSIA</p>
+	<img class="card-img" src="malysia.jpg" alt="Country" style=" height: 150px ; width: 200px;" hspace="50">
     </td>
 	<td >
-
 	</br>
-    <p>Where to go: Kuala Lumpur,Penang,Langkawi</p>
+	</br>
+	</br>
+       <p>Where to go: Kuala Lumpur,Penang,Langkawi</p>
 	<p>Restaurants: Johor Bahru Restaurants, NURMALAYSIA CAIRO,Penang Island Restaurants</p>
 	<p>Airlines: Egypt Air,Fly Emirates,Qatari Airways</p>
 	<form action="Home View.php" method="post">
-	<button class="btn btn-lg btn-block btn-danger" type="submit" name="malysia" style="color:black;">Read more</button>
+        <button class="btn btn-lg btn-block btn-danger" type="submit" name="malysia" style="color:black;">Read more</button>
 	</form>
 	</td>
 	</tr>
@@ -206,11 +218,13 @@ else
   <table cellspacing="20">
   <tr>
   <td>
-  <center>  <p class="section">DUBAI</p> </center>
-<img class="card-img" src="palmislands1.jpg" alt="Country" height="100" width="150" hspace="50">
+<p class="section">DUBAI</p>	
+<img class="card-img" src="palmislands1.jpg" alt="Country" style=" height: 150px; width: 200px;" hspace="50">
 </td>
 <td>
-
+</br>
+</br>
+</br>
 	</br>
  <p>Where to go: Dubai Marina,Burj Khalifa,Burj Al Arab Jumeirah</p>
 	<p>Restaurants: Dubai House,Maiden Shanghai,Ahlan First Class Lounge</p>
