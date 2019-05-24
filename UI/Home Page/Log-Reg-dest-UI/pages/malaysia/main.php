@@ -5,6 +5,10 @@
 <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link  rel="stylesheet" type="text/css" href="style.css">
+ 
+<?php
+session_start();
+?>
 </head>
 <body>
 
@@ -135,8 +139,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-session_start();
+}
 
 if(isset($_POST["book"])){ 
 $_SESSION['user']=$_SESSION{'same'};

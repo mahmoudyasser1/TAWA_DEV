@@ -1,5 +1,9 @@
 <html>
 <head>
+ 
+<?php
+session_start();
+?>
 <title> Turkey </title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
@@ -156,7 +160,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-session_start();
+
 if(isset($_POST["book"])){ 
 $_SESSION['user']=$_SESSION{'same'};
 $_SESSION['destination']="turkey";
