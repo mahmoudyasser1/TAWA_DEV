@@ -38,8 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			
 			if($mysqli->query($sql) === true)
 			{
-				$_SESSION['successmessage'] = "Congratulations! this user has been updated successfully";
-				//header("location: admin.php");
+				
+				header("location:updateSuccess.html");
 
 				
 			}else
