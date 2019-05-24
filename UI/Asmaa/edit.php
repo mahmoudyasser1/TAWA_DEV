@@ -104,30 +104,30 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     <form method="post">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Full Name" name="name">
+                            
                             <input class="input--style-3" type="text" placeholder="Full Name" name="name" value="<?php echo $_SESSION['fname']; ?>">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="User Name" name="uname">
+                            
 
                             <input class="input--style-3 js-datepicker" type="text" placeholder="User Name" value="<?php echo $_SESSION['user']; ?>" name="uname">
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                            
                             <input class="input--style-3" type="email" placeholder="Email" name="email" value="<?php echo $_SESSION['email']; ?>">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                            
                             <input class="input--style-3" type="text" placeholder="Phone" name="phone" value="<?php echo $_SESSION['phone']; ?>">
                         </div>
 						<div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Password" name="password">
+                            
                             <input class="input--style-3" type="password" placeholder="Password" name="password" value="<?php echo $_SESSION['password']; ?>">
                         </div>
 						<div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Confirm Password" name="cpassword">
+                            
 
                             <input class="input--style-3" type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_SESSION['cpassword']; ?>">
                         </div>
