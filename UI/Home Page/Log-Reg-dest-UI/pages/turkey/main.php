@@ -173,8 +173,8 @@ while($row1=mysqli_fetch_assoc($result1)) {
    <a class="arrow arrow-next" href="#item-1"></a>
   </div>
   </div>
-  <form action="main.php" method="post">
-	<input class="btn btn-danger btm10" type="submit" name="book"value="Book Flight number 3333" />
+ <form action="main.php" method="post">
+		<input class="btn btn-danger btm10" type="submit" name=" book" value="Book Flight number 2222" />
 	</form>
 	<form action="main.php" method="post">
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />
