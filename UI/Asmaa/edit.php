@@ -99,9 +99,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <body>
     
             <div class="card card-3" style="background-color: #000000ab;">
-                <div class="card-heading"> </div>
                 <div class="card-body" style="margin-left: 50px;"> 
-                    <form method="post">
+                    <form method="post" style="margin-left: 10px;">
                         </div>
                         <div class="input-group">
                             
@@ -110,7 +109,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                         <div class="input-group">
                             
 
-                            <input class="input--style-3 js-datepicker" type="text" placeholder="User Name" value="<?php echo $_SESSION['user']; ?>" name="uname">
+                            <label class="input--style-3 js-datepicker" value="" name="uname"> <?php echo $_SESSION['user']; ?> </label>
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
 
