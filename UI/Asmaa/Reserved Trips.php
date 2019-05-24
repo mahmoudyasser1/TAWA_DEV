@@ -47,7 +47,7 @@ $x = 1;
 	  
      <?php
 $sql1="SELECT `FlightNumber`, `FlightType`, `LevelOfService`, `AirLines`, `Travel_Date`, `Travel_Destination`,`NumberOfSeats`, `PaymentMethod`  FROM `flight` f ,`book` b 
-where f.`FlightNumber`=b.`Flight_FlightNumber` and `User_Username`= '".$_SESSION['user']."'";
+where f.`FlightNumber`=b.`Flight_FlightNumber` and `User_Username`= '".$_SESSION['same']."'";
 
 $result1 = $conn->query($sql1);
 
@@ -69,6 +69,7 @@ $result1 = $conn->query($sql1);
 	     </td>
 		 
          <td>
+		 
            <label class="style"><br><br><br><?php echo $row1['FlightType'] ?></label>
 
          </td>	
@@ -147,11 +148,12 @@ $result1 = $conn->query($sql1);
       </tr>
 
 	  <?php
-	  	  if(isset($_GET['cancel'])){
-	$sql2 = "DELETE FROM `flight` WHERE FlightNumber='".$row1['FlightNumber']."'";
+	  	  if(isset($_POST['cancel'])){
+	$sql2 = "DELETE  FROM `flight` WHERE FlightNumber='".$row1['FlightNumber']."'";
 	$result2 = $conn->query($sql2);
-	$sql3 = "DELETE FROM `book` WHERE User_Username='".$_SESSION['user']."'";
+	$sql3 = "DELETE FROM `book` WHERE User_Username='".$_SESSION['same']."' AND Flight_FlightNumber='".$row1['FlightNumber']."'";
 	$result3 = $conn->query($sql3);
+	
 	header("location:Reserved Trips.php");
 	
 }
