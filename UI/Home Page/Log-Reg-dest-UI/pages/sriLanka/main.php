@@ -188,9 +188,10 @@ $sql1="SELECT `Comment` ,`Travel_Destination` FROM `feedback` f ,`has` h
 where h.`FeedBack_ID`=f.`ID` and `Travel_Destination`= 'srilanka'";
 
 $result1 = $conn->query($sql1);
+
 while($row1=mysqli_fetch_assoc($result1)) {
 	?>
-	<h1><?php echo $row1['Comment'];?></h1>
+	<h1><center style="background-color: black; color: white;">Comments <br> <span style="font-family: fantasy; font-size: 30px;"><?php echo $row1['Comment'];?> </span></center></h1>
 	<?php
 }
 ?>
