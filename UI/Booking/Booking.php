@@ -96,7 +96,7 @@ if(isset($_POST["Book"])){
 	     </td>
 		 <td class="input">
 		 
-		 <input name="Card" type="Number" required>
+		 <input name="Card" type="Number" required min="0">
 		 
 		 </tr>
 	  <tr>
