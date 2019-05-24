@@ -7,43 +7,7 @@
 <link  rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tawa";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-session_start();
-
-if(isset($_POST["book"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="malaysia";
-$_SESSION['FN']="4444";
-
- header('Location:../../../../Booking/Booking.php');
-}
-if(isset($_POST["feed"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="malaysia";
- header('Location:../../../../Rating/Rating &Feedback.php');
-}
-$sql1="SELECT `Comment` ,`Travel_Destination` FROM `feedback` f ,`has` h
-where h.`FeedBack_ID`=f.`ID` and `Travel_Destination`= 'malaysia'";
-
-$result1 = $conn->query($sql1);
-while($row1=mysqli_fetch_assoc($result1)) {
-	?>
-	<h1><?php echo $row1['Comment'];?></h1>
-	<?php
-}
-
-?>
 <center>
 <div class="section" >
 <h1 class="section h1">Welcome To Malaysia</h1> 
@@ -160,6 +124,43 @@ while($row1=mysqli_fetch_assoc($result1)) {
 	<form action="main.php" method="post">
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />
 	</form>
+	<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tawa";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+session_start();
+
+if(isset($_POST["book"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="malaysia";
+$_SESSION['FN']="4444";
+
+ header('Location:../../../../Booking/Booking.php');
+}
+if(isset($_POST["feed"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="malaysia";
+ header('Location:../../../../Rating/Rating &Feedback.php');
+}
+$sql1="SELECT `Comment` ,`Travel_Destination` FROM `feedback` f ,`has` h
+where h.`FeedBack_ID`=f.`ID` and `Travel_Destination`= 'malaysia'";
+
+$result1 = $conn->query($sql1);
+while($row1=mysqli_fetch_assoc($result1)) {
+	?>
+	<h1><?php echo $row1['Comment'];?></h1>
+	<?php
+}
+
+?>
 	<table border="0" id="footer">
 	<tr>
 		<td><a href="#Top" target="_self">Top</a></td>
