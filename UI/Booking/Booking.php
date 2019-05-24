@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+	function myFunction()
+	{
+
+
+	  var x = document.getElementById("payment").value;
+	  if(x == "Cash")
+	  {
+	  document.getElementById("Card").style.display = "none";
+	  	  document.getElementById("Card").value=0;
+
+	  	  document.getElementById("lbl").style.display = "none";
+
+	  }
+	  else 
+	  {
+	  	  document.getElementById("Card").style.display = "block";
+		  	  document.getElementById("lbl").style.display = "none";
+
+	  }
+	}	
+	</script>
 <link rel="stylesheet" type="text/css" href="Booking style.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 //to be commited
@@ -45,7 +67,6 @@ if(isset($_POST["Book"])){
 ?>
 
 <body for id="white" topmargin="60%"> 
-
 <form method="post" action="Booking.php">
 <center>
 		   
@@ -80,23 +101,25 @@ if(isset($_POST["Book"])){
 	  
 	  <tr>
          <td>
-           <label class="style">Payment Method</label>
+		 
+           <label class="style"  >Payment Method</label>
 	     </td>
          <td class="input">
-	      <select name="payment"onchange=myFunction() >
+	      <select name="payment" id="payment" onchange ="myFunction()" >
 		<option value="Debit Card" width="30">Debit Card</option>      
-	    <option value="Cash" width="30">Cash</option>
+	   		   <option value="Cash" width="30">Cash</option>
+
 		</td>		 
        </select>
 	  </tr>
 	  
 	  <tr>
          <td>
-           <label class="style">Debit card Number</label>
+           <label class="style" id ="lbl">Debit card Number</label>
 	     </td>
 		 <td class="input">
 		 
-		 <input name="Card" type="Number" required min="0">
+		 <input name="Card" id="Card" type="Number" required min="0">
 		 
 		 </tr>
 	  <tr>
@@ -154,22 +177,7 @@ if(isset($_POST["Book"])){
 
 
 </center>
-	<script>
-	function myFunction()
-	{
-	  var x = document.getElementByName("payment").value;
-	  if(x == "Cash")
-	  {
-	  document.getElementByName("Card").disabled=true;
-	  }
-	  else 
-	  {
-	  	  document.getElementByName("Card").disabled=false;
-	  }
-	}
-}
-	
-	</script>
+
   
 
 
