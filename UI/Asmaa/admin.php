@@ -53,6 +53,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
     <ul id="myMenu" style="color: white; margin-left: 20px;">
 
 		<?php
+		if(isset($_SESSION['user']))
+{
 			if (!isset($_POST['search']) && !isset($_POST['delete'])){
 				$sql = "SELECT `Username` FROM `user` WHERE 1";
 				$result = $conn->query($sql);
@@ -77,11 +79,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 				header("location:edit.php");
 				
 				}
-				if (isset($_POST['logout'])){
 				
-				header("location:../Log-Reg-UI/login.php");
-				
-				}
 			if(isset($_POST['delete'])){
 				$sql2 = "DELETE FROM `user` WHERE Username='".$_SESSION['user']."'";
 				$res2 = $conn->query($sql2);
@@ -89,7 +87,15 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 					header("location:admin.php");
 				}
 			}
-				
+if (isset($_POST['logout'])){	
+      session_destroy();  
+	  header("Location:../Log-Reg-UI/login.php");
+}
+}
+else
+{
+	header("Location:../Log-Reg-UI/login.php");
+}	
 		?>
     </ul>
 	</form>

@@ -83,6 +83,7 @@ $_SESSION['user']=  $_POST['username'];
       if(($username2 == $_POST['username'] )&&($password2 ==$_POST['pass'])){
 	  
        header('Location:../Asmaa/admin.php');
+	   $_SESSION['logged']=true;
       } else{
 		  $_SESSION['message'] = "invalid username or password";
 	  }	
