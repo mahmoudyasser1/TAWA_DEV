@@ -3,6 +3,30 @@
  
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tawa";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+if(isset($_POST["book"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="turkey";
+$_SESSION['FN']="2222";
+
+ header('Location:../../../../Booking/Booking.php');
+}
+if(isset($_POST["feed"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="turkey";
+ header('Location:../../../../Rating/Rating &Feedback.php');
+}
 ?>
 <title> Turkey </title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -149,30 +173,7 @@ session_start();
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />
 	</form>
 	<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tawa";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-if(isset($_POST["book"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="turkey";
-$_SESSION['FN']="2222";
-
- header('Location:../../../../Booking/Booking.php');
-}
-if(isset($_POST["feed"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="turkey";
- header('Location:../../../../Rating/Rating &Feedback.php');
-}
 $sql1="SELECT `Comment` ,`Travel_Destination` FROM `feedback` f ,`has` h
 where h.`FeedBack_ID`=f.`ID` and `Travel_Destination`= 'turkey'";
 

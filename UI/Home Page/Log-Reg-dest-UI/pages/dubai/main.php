@@ -3,6 +3,30 @@
  
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tawa";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+if(isset($_POST["book"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="dubai";
+$_SESSION['FN']="3333";
+
+ header('Location:../../../../Booking/Booking.php');
+}
+if(isset($_POST["feed"])){ 
+$_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="dubai";
+ header('Location:../../../../Rating/Rating%20&Feedback.php');
+}
 ?>
 <title> Dubai </title>
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
@@ -138,30 +162,7 @@ After completion, Palm Jebel Ali will take a similar shape. Like Palm Jumeirah, 
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />
 	</form>
 	<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tawa";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-if(isset($_POST["book"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="dubai";
-$_SESSION['FN']="3333";
-
- header('Location:../../../../Booking/Booking.php');
-}
-if(isset($_POST["feed"])){ 
-$_SESSION['user']=$_SESSION{'same'};
-$_SESSION['destination']="dubai";
- header('Location:../../../../Rating/Rating%20&Feedback.php');
-}
 $sql1="SELECT `Comment` ,`Travel_Destination` FROM `feedback` f ,`has` h
 where h.`FeedBack_ID`=f.`ID` and `Travel_Destination`= 'dubai'";
 
