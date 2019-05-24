@@ -11,6 +11,7 @@ $password = "";
 $dbname = "tawa";
 
 if(isset($_POST["home"])){ 
+$_SESSION['logged']=true;
  header('Location:../../../../Home Page/Home View.php');
 }
 ?>

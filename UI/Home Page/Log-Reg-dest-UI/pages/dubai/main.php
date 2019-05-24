@@ -22,6 +22,8 @@ if ($conn->connect_error) {
 session_start();
 if(isset($_POST["book"])){ 
 $_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="dubai";
+$_SESSION['FN']="3333";
 
  header('Location:../../../../Booking/Booking.php');
 }
@@ -160,7 +162,7 @@ After completion, Palm Jebel Ali will take a similar shape. Like Palm Jumeirah, 
   </div>
   </div>
 	<form action="main.php" method="post">
-		<input class="btn btn-danger btm10" type="submit" name="book" value="Book Now" />
+		<input class="btn btn-danger btm10" type="submit" name="book" value="Book Flight number 1111" />
 	</form>
 	<form action="main.php" method="post">
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />

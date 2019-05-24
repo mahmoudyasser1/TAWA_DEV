@@ -28,8 +28,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 session_start();
+
 if(isset($_POST["book"])){ 
 $_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="srilanka";
+$_SESSION['FN']="1111";
 
  header('Location:../../../../Booking/Booking.php');
 }
@@ -181,7 +184,7 @@ while($row1=mysqli_fetch_assoc($result1)) {
   </div>
  </div> 
 	<form action="main.php" method="post">
-		<button class="btn btn-danger btm10" type="submit" name="book" >Book</button>
+		<button class="btn btn-danger btm10" type="submit" name="book" >Book Flight number 1111</button>
 	</form>
 	<form action="main.php" method="post">
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />

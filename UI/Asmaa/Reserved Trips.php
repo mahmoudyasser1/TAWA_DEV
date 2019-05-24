@@ -21,6 +21,10 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+if(isset($_POST["home"])){ 
+$_SESSION['logged']=true;
+ header('Location:../../../../Home Page/Home View.php');
+}
 $x = 1;
 
 
@@ -59,13 +63,18 @@ $result1 = $conn->query($sql1);
 		 
 		 <br>
 		 
-           <label class="style" > <span style="color:#dc3545;">Flight #<?php echo $x++;?> </span><br><br>Flight Type </label>
+           <label class="style" > <span style="color:#dc3545;">Flight # <?php echo $x++;?> <form method = "POST">
+				<input  class="btn btn-danger" type="submit" name="cancel" value="Cancel" />
+			</form>	 </span><br><br>Flight Type </label>
 	     </td>
+		 
          <td>
            <label class="style"><br><br><br><?php echo $row1['FlightType'] ?></label>
 
-         </td>		 
+         </td>	
+		 
       </tr>
+	  
 	  
 	  <tr>
          <td>
@@ -73,6 +82,33 @@ $result1 = $conn->query($sql1);
 	     </td>
 		 <td>
 		   <label class="style"><?php echo $row1["AirLines"]?></label>	
+		 </td>
+         	 
+      </tr>
+	  <tr>
+         <td>
+           <label class="style">Flight number</label>
+	     </td>
+		 <td>
+		   <label class="style"><?php echo $row1["FlightNumber"]?></label>	
+		 </td>
+         	 
+      </tr>
+	  <tr>
+         <td>
+           <label class="style">Flight Date</label>
+	     </td>
+		 <td>
+		   <label class="style"><?php echo $row1["Travel_Date"]?></label>	
+		 </td>
+         	 
+      </tr>
+	  <tr>
+         <td>
+           <label class="style">Flight Destination</label>
+	     </td>
+		 <td>
+		   <label class="style"><?php echo $row1["Travel_Destination"]?></label>	
 		 </td>
          	 
       </tr>
@@ -106,7 +142,8 @@ $result1 = $conn->query($sql1);
 	     </td>
          <td>
            <label class="style"><?php echo $row1["NumberOfSeats"]?></label>
-         </td>		 
+         </td>
+
       </tr>
 
 	  <?php
@@ -118,15 +155,14 @@ $result1 = $conn->query($sql1);
 	header("location:Reserved Trips.php");
 	
 }
+
 				}	
 	  ?>
 
 	  <tr>
 		<td colspan="2"> <center>   
-			<form method = "POST">
-				<input  class="btn btn-danger" type="submit" name="cancel" value="Cancel The Trip" />
-			</form>
-			<input class="btn btn-warning" type="button" value="Home" onclick="window.location.href='../Home Page/Home View.php'" />
+			
+			<input class="btn btn-warning" type="button" value="Home" name ="home" onclick="window.location.href='../Home Page/Home view.php'" />
 		</td>
 	
 	  </tr>

@@ -106,6 +106,10 @@ if(isset($_POST["reserved"])){
 	$_SESSION['same']=$_SESSION['user'];
 	header('location:../Asmaa/Reserved Trips.php');
 }
+if(isset($_POST["log"])){
+	
+      session_destroy();  
+}
 }
 else
 {
@@ -118,7 +122,7 @@ else
 			<div class="collapse navbar-collapse nav-items" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
-				<a class="nav-link links" href="../Log-Reg-UI/login.php">Logout <span class="sr-only">(current)</span></a>
+				<a class="nav-link links" name ="log" href="../Log-Reg-UI/login.php">Logout <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="nav-item">
 				<h3 class="nav-link links"><?php echo $_SESSION['user'];?></h3>
@@ -139,8 +143,7 @@ else
   <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
 </div>
 <br>
-
-<div class="row">
+<div class="row" >
   <div class="column" >
   <table cellspacing="20">
   <tr>

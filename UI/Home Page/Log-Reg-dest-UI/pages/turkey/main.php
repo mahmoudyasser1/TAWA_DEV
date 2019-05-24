@@ -23,6 +23,9 @@ if ($conn->connect_error) {
 session_start();
 if(isset($_POST["book"])){ 
 $_SESSION['user']=$_SESSION{'same'};
+$_SESSION['destination']="turkey";
+$_SESSION['FN']="2222";
+
  header('Location:../../../../Booking/Booking.php');
 }
 if(isset($_POST["feed"])){ 
@@ -171,7 +174,7 @@ while($row1=mysqli_fetch_assoc($result1)) {
   </div>
   </div>
   <form action="main.php" method="post">
-	<input class="btn btn-danger btm10" type="submit" name="book"value="Book Now" />
+	<input class="btn btn-danger btm10" type="submit" name="book"value="Book Flight number 3333" />
 	</form>
 	<form action="main.php" method="post">
 		<input class="btn btn-danger btm60" type="submit" name="feed" value="Write Feedback " />

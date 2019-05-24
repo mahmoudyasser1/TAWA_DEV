@@ -22,17 +22,18 @@ if ($conn->connect_error) {
 } 
 
 
-if(isset($_POST["Book"])){     
-
+if(isset($_POST["Book"])){  
+ 
+  
 		   $sql2 = "INSERT INTO `book`(`User_Username`, `Flight_FlightNumber`, `NumberOfSeats`, `PaymentMethod`) 
-		   values('".$_SESSION['user']."','".$_POST['FN']."','".$_POST['seats']."','".$_POST['payment']."')";
+		   values('".$_SESSION['user']."','".$_SESSION['FN']."','".$_POST['seats']."','".$_POST['payment']."')";
            $sql3="INSERT INTO `flight`(`FlightNumber`, `FlightType`, `LevelOfService`, `AirLines`, `Travel_Date`, `Travel_Destination`) 
-		   VALUES ('".$_POST['FN']."','".$_POST['Type']."','".$_POST['LOS']."','".$_POST['airline']."','".$_POST['Date']."','".$_POST['Destination']."')";
+		   VALUES ('".$_SESSION['FN']."','".$_POST['Type']."','".$_POST['LOS']."','".$_POST['airline']."','".$_POST['Date']."','".$_SESSION['destination']."')";
 
 		  
 			$result2 = $conn->query($sql2);
 			$result3 = $conn->query($sql3);
-			header('Location:../Booking/Thanks for booking.html');
+			header('Location:../Booking/Thanks.php');
 	   
 	   
 		
@@ -52,7 +53,7 @@ if(isset($_POST["Book"])){
    
      <tr>
          <td colspan="2">
-	       <center><p>Booking Form!</p></center>	       
+	       <center><p><h2>Booking Form!</h2></p></center>	       
 	     </td>	
       </tr>
 	
