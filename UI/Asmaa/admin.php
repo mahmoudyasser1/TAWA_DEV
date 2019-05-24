@@ -21,7 +21,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 <body>
 <nav style="height: 50px; background-color: white; font-family:fantasy; font-size:30px; position: fixed; width: 100%;"> TAWA
 
-<button style="float:right; margin-right: 30px;" class="button">Logout</button>
+<form method="post">
+<button type="submit" style="float:right; margin-right: 30px;" class="button" name="logout">Logout</button>
+</form>
 </nav>
 
 
@@ -73,6 +75,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 			if (isset($_POST['edit'])){
 				
 				header("location:edit.php");
+				
+				}
+				if (isset($_POST['logout'])){
+				
+				header("location:../Log-Reg-UI/login.php");
 				
 				}
 			if(isset($_POST['delete'])){
