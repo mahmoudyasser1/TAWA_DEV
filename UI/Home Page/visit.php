@@ -97,6 +97,9 @@ if ($conn->connect_error) {
 			  <li class="nav-item">
 				<a class="nav-link links" name ="log" href="../Log-Reg-UI/login.php">Login <span class="sr-only">(current)</span></a>
 			  </li>
+			  <li class="nav-item">
+				<a class="nav-link links" name ="log" href="../Log-Reg-UI/registration.php">SignUp <span class="sr-only">(current)</span></a>
+			  </li>
 			 
 			  
 
