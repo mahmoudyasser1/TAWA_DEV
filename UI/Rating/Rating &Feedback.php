@@ -56,7 +56,7 @@ font-family:Cookie;
 .mytable
 {
 float:left;
-margin-left:29px;
+margin-left:25px;
 
 }
 textarea,input[type=text] {
