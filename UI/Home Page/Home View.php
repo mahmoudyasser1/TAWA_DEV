@@ -108,7 +108,8 @@ if(isset($_POST["reserved"])){
 }
 if(isset($_POST["log"])){
 	
-      session_destroy();  
+      session_destroy(); 
+      header("Location:../Log-Reg-UI/login.php");	  
 }
 }
 else
