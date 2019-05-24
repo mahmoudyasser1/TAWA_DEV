@@ -65,7 +65,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 			}
 			
 			if (isset($_POST['search'])){
-				$_SESSION['user']= $_POST['uname'];
+				$_SESSION['user1']= $_POST['uname'];
 	           			
 				$sql1 = "SELECT `Username` FROM `user` WHERE Username='".$_POST['uname']."'";
 				$res1 = $conn->query($sql1);

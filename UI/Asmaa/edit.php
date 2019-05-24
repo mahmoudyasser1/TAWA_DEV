@@ -5,8 +5,9 @@ $_SESSION['successmessage'] = '';
 
 $mysqli = new mysqli('localhost', 'root', '', 'tawa');
 		
-        
-        $sql = "SELECT * FROM `user` WHERE `Username`='".$_SESSION['user']."'";
+ 		if(isset($_SESSION['user1']))
+{
+        $sql = "SELECT * FROM `user` WHERE `Username`='".$_SESSION['user1']."'";
 
 		$result = $mysqli->query($sql);
 		while($row = $result->fetch_assoc())
@@ -34,7 +35,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 		if($_POST['password'] == $_POST['cpassword'])
 		{
-			$sql = "UPDATE `user` SET `Password`='".$_POST['password']."',`FullName`='".$_POST['name']."',`Phone`='".$_POST['phone']."',`Email`='".$_POST['email']."',`confirmpassword`='".$_POST['cpassword']."' WHERE `Username`='".$_SESSION['user']."'";
+			$sql = "UPDATE `user` SET `Password`='".$_POST['password']."',`FullName`='".$_POST['name']."',`Phone`='".$_POST['phone']."',`Email`='".$_POST['email']."',`confirmpassword`='".$_POST['cpassword']."' 
+			WHERE `Username`='".$_SESSION['user1']."'";
 			
 			if($mysqli->query($sql) === true)
 			{
@@ -54,7 +56,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			$_SESSION['errormessage'] = "The Password Not Matched";
 		}
 		
-		}		
+			
+}
+}
+else
+{
+	header("location:admin.php");
+}
+
 		
 
 
@@ -109,7 +118,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                         <div class="input-group">
                             
 
-                            <label class="input--style-3 js-datepicker" value="" name="uname"> <?php echo $_SESSION['user']; ?> </label>
+                            <label class="input--style-3 js-datepicker" value="" name="uname"> <?php echo $_SESSION['user1']; ?> </label>
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
 
