@@ -128,7 +128,7 @@ if(isset($_POST["Book"])){
 	     </td>
          <td class="input">
            <input type="radio" name="Type" value="One-Way" required >One-Way</input>
-		   <input type="radio" name="Type" value="Round-Trip">Round-Trip</input>
+		   <input type="radio" name="Type" value="Round-Trip" required>Round-Trip</input>
          </td>		 
       </tr>
 
